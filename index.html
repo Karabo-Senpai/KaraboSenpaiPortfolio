@@ -1,0 +1,975 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cyber.karabo | elite cybersecurity analyst</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+        <!-- Loading Screen -->
+    <div id="loading-screen">
+        <div class="loader-text orbitron neon-glow-ultra">
+            &gt; INITIALIZING_SYSTEM...
+        </div>
+        <div class="loading-bar-container">
+            <div class="loading-bar-fill"></div>
+        </div>
+        <div class="system-text">
+            <p>&gt; LOADING_SECURITY_PROTOCOLS...</p>
+            <p>&gt; ESTABLISHING_SECURE_CONNECTION...</p>
+            <p>&gt; VERIFYING_CREDENTIALS...</p>
+            <p>&gt; SYSTEM_READY | ACCESS_GRANTED</p>
+        </div>
+    </div>
+
+    <!-- Matrix Background -->
+    <canvas id="matrix-canvas"></canvas>
+
+<div class="content-wrapper">
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 terminal-nav">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+         <div class="text-3xl font-bold orbitron neon-glow-ultra logo-glitch">
+            <a href="#home" data-text="&lt;/Cyber.Karabo&gt;">&lt;/Cyber.Karabo&gt;</a>
+      </div>
+
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex space-x-2 orbitron">
+                    <a href="#home" class="nav-link text-lg font-semibold text-green-500 relative">HOME</a>
+                    <a href="#about" class="nav-link text-lg font-semibold text-green-500 relative">ABOUT</a>
+                    <a href="#skills" class="nav-link text-lg font-semibold text-green-500 relative">SKILLS</a>
+                    <a href="#certifications" class="nav-link text-lg font-semibold text-green-500 relative">CERTS</a>
+                    <a href="#learning" class="nav-link text-lg font-semibold text-green-500 relative">TRAINING</a>
+                    <a href="#projects" class="nav-link text-lg font-semibold text-green-500 relative">PROJECTS</a>
+                    <a href="#contact" class="nav-link text-lg font-semibold text-green-500 relative">CONTACT</a>
+                </div>
+
+                <!-- Mobile Button -->
+                <button id="mobile-menu-btn" class="md:hidden neon-glow-ultra text-green-500 transition-all duration-300">
+                    <!-- Hamburger Icon -->
+                    <svg id="hamburger-icon" class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                              d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                    <!-- Close Icon -->
+                    <svg id="close-icon" class="w-8 h-8 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                              d="M6 18L18 6M6 6l12 12"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="fixed top-0 left-0 w-full h-full bg-black bg-opacity-95 hidden flex-col items-center justify-center space-y-8 text-green-500 text-xl orbitron z-40 transition-all duration-300">
+        <a href="#home" class="nav-link">HOME</a>
+        <a href="#about" class="nav-link">ABOUT</a>
+        <a href="#skills" class="nav-link">SKILLS</a>
+        <a href="#certifications" class="nav-link">CERTS</a>
+        <a href="#learning" class="nav-link">TRAINING</a>
+        <a href="#projects" class="nav-link">PROJECTS</a>
+        <a href="#contact" class="nav-link">CONTACT</a>
+    </div>
+</div>
+
+
+   <!-- Hero Section -->
+        <section id="home" class="min-h-screen flex items-center justify-center pt-20 px-4 sm:px-6 lg:px-8 cyber-grid scanline-enhanced">
+            <div class="max-w-7xl mx-auto text-center w-full">
+                <div class="pulse-enhanced mb-12">
+                    <div class="w-40 h-40 sm:w-48 sm:h-48 mx-auto neon-border-animated rounded-full flex items-center justify-center relative bg-black">
+                        <svg class="w-20 h-20 sm:w-24 sm:h-24 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+                        </svg>
+                        <div class="absolute inset-0 rounded-full bg-green-500 opacity-20 animate-ping"></div>
+                        <div class="absolute inset-0 rounded-full bg-green-500 opacity-10 animate-ping" style="animation-delay: 0.5s;"></div>
+                    </div>
+                </div>
+                <h1 class="text-5xl sm:text-6xl md:text-7xl lg:text-9xl font-black mb-6 orbitron glitch-advanced neon-glow-ultra text-white" data-text="CYBERSECURITY">
+                    CYBERSECURITY
+                </h1>
+                <h2 class="text-3xl sm:text-4xl md:text-5xl lg:text-7xl mb-8 orbitron font-bold text-white">ANALYST & DEVELOPER</h2>
+                <div class="max-w-4xl mx-auto mb-12 px-4">
+                    <p class="text-xl sm:text-2xl md:text-3xl text-green-400 mb-6 mono font-bold">
+                        > SECURING_DIGITAL_INFRASTRUCTURE();
+                    </p>
+                    <p class="text-lg sm:text-xl md:text-2xl text-gray-300 font-semibold">
+                        Threat Detection | Incident Response | Secure Code | SOC Operations
+                    </p>
+                </div>
+                <div class="flex flex-col sm:flex-row flex-wrap justify-center gap-6 px-4">
+                    <a href="#contact" class="px-12 py-5 neon-border-animated btn-enhanced rounded-xl orbitron text-xl font-bold text-green-500 relative z-10">
+                        INITIATE_CONTACT
+                    </a>
+                    <a href="#certifications" class="px-12 py-5 border-4 border-green-600 btn-enhanced rounded-xl orbitron text-xl font-bold text-green-500 hover:bg-green-900/20 relative z-10">
+                        VIEW_CREDENTIALS
+                    </a>
+                </div>
+            </div>
+        </section>
+
+<!-- About Section -->
+        <section id="about" class="py-24 px-4 sm:px-6 lg:px-8 hex-pattern-advanced">
+            <div class="max-w-7xl mx-auto">
+                <h2 class="text-5xl sm:text-6xl md:text-8xl font-black text-center mb-20 orbitron neon-glow-ultra scanline-enhanced text-white">
+                    &gt; ABOUT_ME.exe
+                </h2>
+                <div class="grid md:grid-cols-2 gap-10">
+                    <div class="cyber-card-ultra rounded-2xl p-10 scanline-enhanced">
+                        <div class="flex items-center mb-8">
+                            <div class="w-16 h-16 neon-border-animated rounded-xl flex items-center justify-center mr-6 bg-black">
+                                <svg class="w-10 h-10 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z"></path>
+                                </svg>
+                            </div>
+                            <h3 class="text-3xl font-black orbitron text-white">SECURITY_PATH</h3>
+                        </div>
+                        <div class="space-y-5 text-lg">
+                            <p class="text-green-400 font-bold mono text-xl">> STATUS: ACTIVE_LEARNING</p>
+                            <p class="text-gray-300 leading-relaxed font-medium">
+                                Aspiring SOC Analyst specializing in threat hunting, incident response, and security monitoring. Currently advancing through CySA+ certification path.
+                            </p>
+                            <p class="text-green-400 font-bold mono text-xl">> MISSION: DEFEND_DIGITAL_ASSETS</p>
+                            <p class="text-gray-300 leading-relaxed font-medium">
+                                Dedicated to understanding evolving threat landscapes and implementing robust defensive strategies against cyber adversaries.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="cyber-card-ultra rounded-2xl p-10 scanline-enhanced">
+                        <div class="flex items-center mb-8">
+                            <div class="w-16 h-16 neon-border-animated rounded-xl flex items-center justify-center mr-6 bg-black">
+                                <svg class="w-10 h-10 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path>
+                                </svg>
+                            </div>
+                            <h3 class="text-3xl font-black orbitron text-white">DEVELOPER_MODE</h3>
+                        </div>
+                        <div class="space-y-5 text-lg">
+                            <p class="text-green-400 font-bold mono text-xl">> CREDENTIALS: VERIFIED</p>
+                            <p class="text-gray-300 leading-relaxed font-medium">
+                                Qualified Software Developer | Diploma in Information Technology & Software Development. Unique perspective combining security and development expertise.
+                            </p>
+                            <p class="text-green-400 font-bold mono text-xl">> ADVANTAGE: DUAL_SKILLSET</p>
+                            <p class="text-gray-300 leading-relaxed font-medium">
+                                Coding expertise enhances vulnerability identification, security automation, and secure application development from the ground up.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="py-24 px-4 sm:px-6 lg:px-8 cyber-grid">
+            <div class="max-w-7xl mx-auto">
+                <h2 class="text-5xl sm:text-6xl md:text-8xl font-black text-center mb-20 orbitron neon-glow-ultra scanline-enhanced text-white">
+                    &gt; TECHNICAL_ARSENAL
+                </h2>
+                <div class="grid md:grid-cols-3 gap-10">
+                    <!-- Security Skills -->
+                    <div class="cyber-card-ultra rounded-2xl p-10">
+                        <div class="flex items-center mb-10">
+                            <div class="w-20 h-20 neon-border-animated rounded-xl flex items-center justify-center mr-6 flex-shrink-0 bg-white">
+                                <svg class="w-12 h-12 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path>
+                                </svg>
+                            </div>
+                            <h3 class="text-2xl font-black orbitron text-gray-800">SECURITY_OPS</h3>
+                        </div>
+                        <ul class="space-y-5 text-lg">
+                            <li class="flex items-center text-green-600 font-semibold">
+                                <span class="text-3xl mr-4">▹</span> Threat Detection & Hunting
+                            </li>
+                            <li class="flex items-center text-green-600 font-semibold">
+                                <span class="text-3xl mr-4">▹</span> SIEM & Log Analysis
+                            </li>
+                            <li class="flex items-center text-green-600 font-semibold">
+                                <span class="text-3xl mr-4">▹</span> Incident Response
+                            </li>
+                            <li class="flex items-center text-green-600 font-semibold">
+                                <span class="text-3xl mr-4">▹</span> Network Security
+                            </li>
+                            <li class="flex items-center text-green-600 font-semibold">
+                                <span class="text-3xl mr-4">▹</span> Vulnerability Assessment
+                            </li>
+                            <li class="flex items-center text-green-600 font-semibold">
+                                <span class="text-3xl mr-4">▹</span> Security Frameworks
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Development Skills -->
+                    <div class="cyber-card-ultra rounded-2xl p-10">
+                        <div class="flex items-center mb-10">
+                            <div class="w-20 h-20 neon-border-animated rounded-xl flex items-center justify-center mr-6 flex-shrink-0 bg-white">
+                                <svg class="w-12 h-12 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path>
+                                </svg>
+                            </div>
+                            <h3 class="text-2xl font-black orbitron text-gray-800">DEVELOPMENT</h3>
+                        </div>
+                        <ul class="space-y-5 text-lg">
+                            <li class="flex items-center text-green-600 font-semibold">
+                                <span class="text-3xl mr-4">▹</span> Python & Scripting
+                            </li>
+                            <li class="flex items-center text-green-600 font-semibold">
+                                <span class="text-3xl mr-4">▹</span> Web Development
+                            </li>
+                            <li class="flex items-center text-green-600 font-semibold">
+                                <span class="text-3xl mr-4">▹</span> Database Management
+                            </li>
+                            <li class="flex items-center text-green-600 font-semibold">
+                                <span class="text-3xl mr-4">▹</span> Secure Coding
+                            </li>
+                            <li class="flex items-center text-green-600 font-semibold">
+                                <span class="text-3xl mr-4">▹</span> API Development
+                            </li>
+                            <li class="flex items-center text-green-600 font-semibold">
+                                <span class="text-3xl mr-4">▹</span> Version Control (Git)
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Tools & Cloud -->
+                    <div class="cyber-card-ultra rounded-2xl p-10">
+                        <div class="flex items-center mb-10">
+                            <div class="w-20 h-20 neon-border-animated rounded-xl flex items-center justify-center mr-6 flex-shrink-0 bg-white">
+                                <svg class="w-12 h-12 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z"></path>
+                                </svg>
+                            </div>
+                            <h3 class="text-2xl font-black orbitron text-gray-800">TOOLS_CLOUD</h3>
+                        </div>
+                        <ul class="space-y-5 text-lg">
+                            <li class="flex items-center text-green-600 font-semibold">
+                                <span class="text-3xl mr-4">▹</span> AWS Cloud Platform
+                            </li>
+                            <li class="flex items-center text-green-600 font-semibold">
+                                <span class="text-3xl mr-4">▹</span> Linux/Unix Systems
+                            </li>
+                            <li class="flex items-center text-green-600 font-semibold">
+                                <span class="text-3xl mr-4">▹</span> Wireshark & tcpdump
+                            </li>
+                            <li class="flex items-center text-green-600 font-semibold">
+                                <span class="text-3xl mr-4">▹</span> Nmap & Metasploit
+                            </li>
+                            <li class="flex items-center text-green-600 font-semibold">
+                                <span class="text-3xl mr-4">▹</span> Docker Containers
+                            </li>
+                            <li class="flex items-center text-green-600 font-semibold">
+                                <span class="text-3xl mr-4">▹</span> Security Automation
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Certifications Section -->
+         <section id="certifications" class="py-16 md:py-24 px-4 sm:px-6 lg:px-8 hex-pattern-advanced">
+            <div class="max-w-7xl mx-auto">
+                <h2 class="text-4xl sm:text-5xl md:text-8xl font-black text-center mb-12 md:mb-20 orbitron neon-glow-ultra scanline-enhanced text-white">
+                    &gt; CREDENTIALS_VERIFIED
+                </h2>
+                <div class="grid md:grid-cols-2 gap-6 md:gap-10">
+                    <div class="cyber-card-ultra rounded-2xl p-6 md:p-10 relative overflow-hidden">
+                        <div class="flex flex-col sm:flex-row items-start justify-between mb-6 md:mb-8 gap-4 md:gap-6">
+                            <div class="flex-1">
+                                <h3 class="text-2xl md:text-3xl font-black orbitron text-white mb-3">AWS CERTIFIED</h3>
+                                <p class="text-lg md:text-xl text-green-600 font-bold">Cloud Practitioner CLF-C02</p>
+                            </div>
+                            <div class="w-20 h-20 md:w-24 md:h-24 neon-border-animated rounded-xl flex items-center justify-center pulse-enhanced flex-shrink-0 bg-white p-2">
+                                <img src="https://d1.awsstatic.com/training-and-certification/certification-badges/AWS-Certified-Cloud-Practitioner_badge.634f8a21af2e0e956ed8905a72366146ba22b74c.png" alt="AWS Certified" class="cert-logo">
+                            </div>
+                        </div>
+                        <p class="text-base md:text-lg text-gray-800 mb-4 font-semibold mono">
+                            > VALIDATION: COMPLETE
+                        </p>
+                        <p class="text-sm md:text-base text-gray-700 leading-relaxed">
+                            Foundation-level knowledge of AWS Cloud concepts, services, security architecture, pricing models, and support frameworks.
+                        </p>
+                    </div>
+
+                    <div class="cyber-card-ultra rounded-2xl p-6 md:p-10 relative overflow-hidden">
+                        <div class="flex flex-col sm:flex-row items-start justify-between mb-6 md:mb-8 gap-4 md:gap-6">
+                            <div class="flex-1">
+                                <h3 class="text-2xl md:text-3xl font-black orbitron text-white mb-3">COMPTIA SECURITY+</h3>
+                                <p class="text-lg md:text-xl text-green-600 font-bold">Certified Security Professional</p>
+                            </div>
+                            <div class="w-20 h-20 md:w-24 md:h-24 neon-border-animated rounded-xl flex items-center justify-center pulse-enhanced flex-shrink-0 bg-white p-2">
+                                <img src="https://comptiacdn.azureedge.net/webcontent/images/default-source/siteicons/logosecurityplus.svg" alt="Security+" class="cert-logo">
+                            </div>
+                        </div>
+                        <p class="text-base md:text-lg text-gray-800 mb-4 font-semibold mono">
+                            > STATUS: CERTIFIED
+                        </p>
+                        <p class="text-sm md:text-base text-gray-700 leading-relaxed">
+                            Baseline cybersecurity skills validated: risk management, threat analysis, cryptography, incident response, and security operations.
+                        </p>
+                    </div>
+
+                    <div class="cyber-card-ultra rounded-2xl p-6 md:p-10 md:col-span-2 relative overflow-hidden">
+                        <div class="flex flex-col sm:flex-row items-start justify-between mb-6 md:mb-8 gap-4 md:gap-6">
+                            <div class="flex-1">
+                                <h3 class="text-2xl md:text-3xl font-black orbitron text-white mb-3">COMPTIA CYSA+</h3>
+                                <p class="text-lg md:text-xl text-yellow-600 font-bold">[IN PROGRESS]</p>
+                            </div>
+                            <div class="w-20 h-20 md:w-24 md:h-24 border-4 border-yellow-500 rounded-xl flex items-center justify-center flex-shrink-0 bg-white p-2">
+                                <img src="https://images.credly.com/images/dcd99b5b-da24-40a6-9364-62126d590c37/blob" alt="CySA+" class="cert-logo">
+                            </div>
+                        </div>
+                        <p class="text-base md:text-lg text-gray-800 mb-4 md:mb-6 font-semibold mono">
+                            > STATUS: TRAINING_IN_PROGRESS
+                        </p>
+                        <p class="text-sm md:text-base text-gray-700 mb-6 md:mb-8 leading-relaxed">
+                            Advanced certification covering behavioral analytics, threat intelligence, security monitoring, incident response, and vulnerability management.
+                        </p>
+                        <div class="w-full bg-gray-200 rounded-xl h-8 md:h-10 border-3 border-green-500 overflow-hidden relative">
+                            <div class="h-full bg-gradient-to-r from-green-500 via-green-400 to-yellow-400 rounded-xl shadow-lg" style="width: 2%"></div>
+                        </div>
+                        <p class="text-right text-base md:text-lg text-yellow-600 mt-3 md:mt-4 orbitron font-bold">2% COMPLETION</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Learning Platforms Section -->
+        <section id="learning" class="py-24 px-4 sm:px-6 lg:px-8 cyber-grid">
+            <div class="max-w-7xl mx-auto">
+                <h2 class="text-5xl sm:text-6xl md:text-8xl font-black text-center mb-12 orbitron neon-glow-ultra scanline-enhanced text-white">
+                    &gt; ACTIVE_TRAINING
+                </h2>
+                <p class="text-center text-2xl sm:text-3xl text-gray-700 mb-20 max-w-4xl mx-auto px-4 font-bold mono">
+                    > CONTINUOUS_SKILL_DEVELOPMENT.py --mode=HANDS_ON
+                </p>
+                <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <div class="cyber-card-ultra rounded-2xl p-10 text-center group">
+                        <div class="w-28 h-28 mx-auto mb-8 neon-border-animated rounded-2xl flex items-center justify-center pulse-enhanced bg-white">
+                            <span class="text-5xl font-black orbitron text-green-600">THM</span>
+                        </div>
+                        <h3 class="text-2xl font-black orbitron mb-4 text-white group-hover:neon-glow-ultra transition">TRYHACKME</h3>
+                        <p class="text-base text-gray-700 font-medium">Penetration Testing Labs & Security Challenges</p>
+                    </div>
+
+                    <div class="cyber-card-ultra rounded-2xl p-10 text-center group">
+                        <div class="w-28 h-28 mx-auto mb-8 neon-border-animated rounded-2xl flex items-center justify-center pulse-enhanced bg-white">
+                            <span class="text-5xl font-black orbitron text-green-600">LDF</span>
+                        </div>
+                        <h3 class="text-2xl font-black orbitron mb-4 text-white group-hover:neon-glow-ultra transition">LETSDEFEND</h3>
+                        <p class="text-base text-gray-700 font-medium">Blue Team Training & SOC Simulations</p>
+                    </div>
+
+                    <div class="cyber-card-ultra rounded-2xl p-10 text-center group">
+                        <div class="w-28 h-28 mx-auto mb-8 neon-border-animated rounded-2xl flex items-center justify-center pulse-enhanced bg-white">
+                            <span class="text-5xl font-black orbitron text-green-600">HTB</span>
+                        </div>
+                        <h3 class="text-2xl font-black orbitron mb-4 text-white group-hover:neon-glow-ultra transition">HACKTHEBOX</h3>
+                        <p class="text-base text-gray-700 font-medium">Advanced Penetration Testing Challenges</p>
+                    </div>
+
+                    <div class="cyber-card-ultra rounded-2xl p-10 text-center group">
+                        <div class="w-28 h-28 mx-auto mb-8 neon-border-animated rounded-2xl flex items-center justify-center pulse-enhanced bg-white">
+                            <span class="text-5xl font-black orbitron text-green-600">CBR</span>
+                        </div>
+                        <h3 class="text-2xl font-black orbitron mb-4 text-white group-hover:neon-glow-ultra transition">CYBRARY</h3>
+                        <p class="text-base text-gray-700 font-medium">Comprehensive Security Courses & Paths</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+       <section id="projects" class="py-24 px-4 sm:px-6 lg:px-8 hex-pattern-advanced">
+  <div class="max-w-7xl mx-auto">
+    <!-- Section Title -->
+    <h2 class="text-5xl sm:text-6xl md:text-8xl font-black text-center mb-12 orbitron neon-glow-ultra scanline-enhanced text-white">
+      &gt; PROJECTS_PORTFOLIO
+    </h2>
+    <p class="text-center text-2xl sm:text-3xl text-gray-400 mb-12 max-w-3xl mx-auto px-4 font-bold mono">
+      > SHOWCASING_SECURITY_IMPLEMENTATIONS & SOFTWARE_DEVELOPMENT
+    </p>
+
+    <!-- Filter Buttons -->
+    <div class="flex justify-center gap-6 mb-12">
+      <button class="filter-btn px-6 py-2 rounded-full border-2 border-green-500 text-green-500 font-bold hover:bg-green-500 hover:text-black transition-colors duration-200" data-filter="all">All</button>
+      <button class="filter-btn px-6 py-2 rounded-full border-2 border-green-500 text-green-500 font-bold hover:bg-green-500 hover:text-black transition-colors duration-200" data-filter="security">Server Security</button>
+      <button class="filter-btn px-6 py-2 rounded-full border-2 border-green-500 text-green-500 font-bold hover:bg-green-500 hover:text-black transition-colors duration-200" data-filter="software">Software Dev</button>
+    </div>
+
+    <!-- Projects Grid -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10" id="projects-grid">
+
+      <!-- Completed Server Security Project -->
+      <div class="project-card cyber-card-ultra p-6 rounded-2xl bg-gray-900 border-2 border-green-500 hover:shadow-neon transition-all duration-300" data-category="security" data-status="completed">
+        <div class="flex items-center mb-2">
+          <span class="text-green-400 text-2xl mr-2">🛡️</span>
+          <h3 class="text-2xl font-black orbitron text-green-400">Automated Threat Detection</h3>
+        </div>
+        <p class="text-gray-300 mb-4 leading-relaxed">
+          SIEM implementation with real-time alerting and automated threat analysis to secure server environments.
+        </p>
+        <span class="text-green-500 font-bold mb-4 inline-block">Status: Completed</span>
+        <br>
+        <a href="https://example.com/threat-detection" target="_blank" class="inline-flex items-center mt-3 text-green-500 font-bold hover:text-green-400">
+          <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+          </svg>
+          Run Project
+        </a>
+      </div>
+
+      <!-- Incomplete Server Security Project -->
+      <div class="project-card cyber-card-ultra p-6 rounded-2xl bg-gray-900 border-2 border-gray-700 hover:shadow-neon transition-all duration-300" data-category="security" data-status="incomplete">
+        <div class="flex items-center mb-2">
+          <span class="text-gray-400 text-2xl mr-2">🛡️</span>
+          <h3 class="text-2xl font-black orbitron text-gray-400">Incident Response Dashboard</h3>
+        </div>
+        <p class="text-gray-300 mb-4 leading-relaxed">
+          Dashboard to monitor and respond to cybersecurity incidents in real-time with automated logging.
+        </p>
+        <span class="text-yellow-400 font-bold mb-4 inline-block">Status: In Progress</span>
+      </div>
+
+      <!-- Completed Software Development Project -->
+      <div class="project-card cyber-card-ultra p-6 rounded-2xl bg-gray-900 border-2 border-green-500 hover:shadow-neon transition-all duration-300" data-category="software" data-status="completed">
+        <div class="flex items-center mb-2">
+          <span class="text-green-400 text-2xl mr-2">💻</span>
+          <h3 class="text-2xl font-black orbitron text-green-400">Secure Portfolio Website</h3>
+        </div>
+        <p class="text-gray-300 mb-4 leading-relaxed">
+          Full-stack secure portfolio using React, Node.js, JWT authentication, and Tailwind UI.
+        </p>
+        <span class="text-green-500 font-bold mb-4 inline-block">Status: Completed</span>
+        <br>
+        <a href="https://example.com/portfolio" target="_blank" class="inline-flex items-center mt-3 text-green-500 font-bold hover:text-green-400">
+          <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+          </svg>
+          Run Project
+        </a>
+      </div>
+
+      <!-- Incomplete Software Development Project -->
+      <div class="project-card cyber-card-ultra p-6 rounded-2xl bg-gray-900 border-2 border-gray-700 hover:shadow-neon transition-all duration-300" data-category="software" data-status="incomplete">
+        <div class="flex items-center mb-2">
+          <span class="text-gray-400 text-2xl mr-2">💻</span>
+          <h3 class="text-2xl font-black orbitron text-gray-400">Cyber Incident Tracker</h3>
+        </div>
+        <p class="text-gray-300 mb-4 leading-relaxed">
+          Dashboard for logging, tracking, and exporting cyber incidents securely with JWT-protected admin access.
+        </p>
+        <span class="text-yellow-400 font-bold mb-4 inline-block">Status: In Progress</span>
+      </div>
+
+    </div>
+
+    <!-- More Projects Coming Soon -->
+    <div class="mt-20 text-center">
+      <h3 class="text-3xl sm:text-4xl font-black orbitron neon-glow-ultra text-white mb-6">
+        &gt; MORE_PROJECTS_COMING_SOON
+      </h3>
+      <p class="text-gray-400 text-xl max-w-2xl mx-auto leading-relaxed">
+        As I continue to learn and grow on my journey, more hands-on server security and software development projects will be added here. Stay tuned!
+      </p>
+    </div>
+  </div>
+</section>
+
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-24 px-4 sm:px-6 lg:px-8 cyber-grid">
+            <div class="max-w-5xl mx-auto">
+                <h2 class="text-5xl sm:text-6xl md:text-8xl font-black text-center mb-12 orbitron neon-glow-ultra scanline-enhanced text-white">
+                    &gt; ESTABLISH_CONNECTION
+                </h2>
+                <p class="text-xl sm:text-2xl text-gray-700 mb-20 max-w-3xl mx-auto text-center px-4 font-bold leading-relaxed">
+                    > OPEN_TO_OPPORTUNITIES: [CYBERSECURITY, SOFTWARE_DEV]<br/>
+                    > MISSION: BUILD_SECURE_DIGITAL_FUTURE
+                </p>
+
+                <!-- Contact Form -->
+                <div class="cyber-card-ultra rounded-2xl p-12 mb-16">
+                    <h3 class="text-3xl font-black orbitron mb-10 text-gray-800 text-center">
+                        &gt; SEND_ENCRYPTED_MESSAGE
+                    </h3>
+                    <form id="contact-form" class="space-y-8">
+                        <div>
+                            <label class="block text-green-600 mb-3 orbitron text-lg font-bold">> NAME:</label>
+                            <input type="text" id="name" name="name" required 
+                                class="form-input-advanced" 
+                                placeholder="Enter your name..."
+                                maxlength="100">
+                            <p class="error-message" id="name-error">Invalid name format</p>
+                        </div>
+                        <div>
+                            <label class="block text-green-600 mb-3 orbitron text-lg font-bold">> EMAIL:</label>
+                            <input type="email" id="email" name="email" required 
+                                class="form-input-advanced" 
+                                placeholder="your.email@domain.com">
+                            <p class="error-message" id="email-error">Invalid email format</p>
+                        </div>
+                        <div>
+                            <label class="block text-green-600 mb-3 orbitron text-lg font-bold">> SUBJECT:</label>
+                            <input type="text" id="subject" name="subject" required 
+                                class="form-input-advanced" 
+                                placeholder="Message subject..."
+                                maxlength="200">
+                            <p class="error-message" id="subject-error">Subject required</p>
+                        </div>
+                        <div>
+                            <label class="block text-green-600 mb-3 orbitron text-lg font-bold">> MESSAGE:</label>
+                            <textarea id="message" name="message" required rows="6" 
+                                class="form-input-advanced resize-none" 
+                                placeholder="Type your message here..."
+                                maxlength="5000"></textarea>
+                            <p class="error-message" id="message-error">Message required</p>
+                        </div>
+                        <button type="submit" 
+                            class="w-full px-10 py-5 neon-border-animated btn-enhanced rounded-xl orbitron text-2xl font-black bg-white text-green-600 hover:bg-green-50 transition-colors">
+                            TRANSMIT_MESSAGE
+                        </button>
+                        <div id="form-status" class="hidden text-center p-6 rounded-xl mt-6 font-bold text-xl"></div>
+                    </form>
+                </div>
+
+                <!-- Social Links -->
+                <div class="grid grid-cols-2 lg:grid-cols-4 gap-6">
+                    <a href="mailto:karabomere47@gmail.com" class="cyber-card-ultra rounded-2xl p-8 btn-enhanced text-center">
+                        <svg class="w-16 h-16 mx-auto mb-4 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                        </svg>
+                        <span class="text-xl orbitron text-gray-800 font-bold">EMAIL</span>
+                    </a>
+                    <a href="https://www.linkedin.com/in/karabo-dev/" target="_blank" class="cyber-card-ultra rounded-2xl p-8 btn-enhanced text-center">
+                        <svg class="w-16 h-16 mx-auto mb-4 text-green-600" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                        </svg>
+                        <span class="text-xl orbitron text-gray-800 font-bold">LINKEDIN</span>
+                    </a>
+                    <a href="https://github.com/Karabo-Senpai" target="_blank" class="cyber-card-ultra rounded-2xl p-8 btn-enhanced text-center">
+                        <svg class="w-16 h-16 mx-auto mb-4 text-green-600" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                        </svg>
+                        <span class="text-xl orbitron text-gray-800 font-bold">GITHUB</span>
+                    </a>
+                  <a href="https://discord.com/users/cyber.karabo" target="_blank" class="cyber-card-ultra rounded-2xl p-6 md:p-8 btn-enhanced text-center">
+                        <svg class="w-12 h-12 md:w-16 md:h-16 mx-auto mb-3 md:mb-4 text-green-600" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515a.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0a12.64 12.64 0 0 0-.617-1.25a.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057a19.9 19.9 0 0 0 5.993 3.03a.078.078 0 0 0 .084-.028a14.09 14.09 0 0 0 1.226-1.994a.076.076 0 0 0-.041-.106a13.107 13.107 0 0 1-1.872-.892a.077.077 0 0 1-.008-.128a10.2 10.2 0 0 0 .372-.292a.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127a12.299 12.299 0 0 1-1.873.892a.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028a19.839 19.839 0 0 0 6.002-3.03a.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419c0-1.333.956-2.419 2.157-2.419c1.21 0 2.176 1.096 2.157 2.42c0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419c0-1.333.955-2.419 2.157-2.419c1.21 0 2.176 1.096 2.157 2.42c0 1.333-.946 2.418-2.157 2.418z"/>
+                        </svg>
+                        <span class="text-lg md:text-xl orbitron text-gray-800 font-bold">DISCORD</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="py-16 px-4 sm:px-6 lg:px-8 terminal-nav border-t-4 border-green-500">
+            <div class="max-w-7xl mx-auto text-center">
+                <p class="text-2xl text-gray-800 mb-6 orbitron font-bold">
+                    &lt;/&gt; CRAFTED_WITH: [PASSION, SECURITY, CODE]
+                </p>
+                <div class="flex flex-col sm:flex-row flex-wrap justify-center gap-4 text-green-600 text-lg mb-6 font-semibold">
+                    <span class="orbitron"><span id="currentYear"></span> Cyber.Karabo &copy;</span>
+                    <span class="hidden sm:inline">|</span>
+                    <span>DIPLOMA: IT & SOFTWARE DEVELOPMENT</span>
+                    <span class="hidden sm:inline">|</span>
+                    <span>LOCATION: SOUTH AFRICA</span>
+                </div>
+                <p class="text-gray-700 font-bold mono">
+                    > SYSTEM_STATUS: OPERATIONAL<br/>
+                    > THREAT_LEVEL: SECURE
+                </p>
+            </div>
+        </footer>
+    </div>
+
+<script src="script.js">
+</script>
+
+
+  <script>
+        // Loading Screen
+        window.addEventListener('load', () => {
+            setTimeout(() => {
+                document.getElementById('loading-screen').classList.add('hidden');
+            }, 3000);
+        });
+
+        // Input Sanitization & Validation
+        function sanitizeInput(input) {
+            // Remove HTML tags and dangerous characters
+            const div = document.createElement('div');
+            div.textContent = input;
+            let sanitized = div.innerHTML;
+            
+            // Remove script tags and event handlers
+            sanitized = sanitized.replace(/<script\b[^<]*(?:(?!<\/script>)<[^<]*)*<\/script>/gi, '');
+            sanitized = sanitized.replace(/on\w+\s*=\s*["'][^"']*["']/gi, '');
+            sanitized = sanitized.replace(/javascript:/gi, '');
+            
+            // Remove SQL injection patterns
+            const sqlPatterns = [
+                /(\bSELECT\b|\bINSERT\b|\bUPDATE\b|\bDELETE\b|\bDROP\b|\bCREATE\b|\bALTER\b)/gi,
+                /(\bUNION\b|\bJOIN\b)/gi,
+                /(--|;|\/\*|\*\/)/g,
+                /(\bOR\b\s+\d+\s*=\s*\d+|\bAND\b\s+\d+\s*=\s*\d+)/gi
+            ];
+            
+            sqlPatterns.forEach(pattern => {
+                sanitized = sanitized.replace(pattern, '');
+            });
+            
+            return sanitized.trim();
+        }
+
+        function validateEmail(email) {
+            const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+            return emailRegex.test(email);
+        }
+
+        function validateName(name) {
+            const nameRegex = /^[a-zA-Z\s'-]{2,100}$/;
+            return nameRegex.test(name);
+        }
+
+        function showError(inputId, errorId, message) {
+            const input = document.getElementById(inputId);
+            const error = document.getElementById(errorId);
+            input.classList.add('error');
+            error.textContent = message;
+            error.classList.add('show');
+        }
+
+        function clearError(inputId, errorId) {
+            const input = document.getElementById(inputId);
+            const error = document.getElementById(errorId);
+            input.classList.remove('error');
+            error.classList.remove('show');
+        }
+
+        // Contact Form Handler with Security
+        document.getElementById('contact-form').addEventListener('submit', async function(e) {
+            e.preventDefault();
+            
+            const formStatus = document.getElementById('form-status');
+            const submitBtn = e.target.querySelector('button[type="submit"]');
+            
+            // Clear previous errors
+            clearError('name', 'name-error');
+            clearError('email', 'email-error');
+            clearError('subject', 'subject-error');
+            clearError('message', 'message-error');
+            
+            // Get and sanitize form data
+            let name = sanitizeInput(document.getElementById('name').value);
+            let email = sanitizeInput(document.getElementById('email').value);
+            let subject = sanitizeInput(document.getElementById('subject').value);
+            let message = sanitizeInput(document.getElementById('message').value);
+            
+            // Validation
+            let hasError = false;
+            
+            if (!validateName(name)) {
+                showError('name', 'name-error', 'Invalid name. Use only letters, spaces, hyphens, and apostrophes (2-100 characters)');
+                hasError = true;
+            }
+            
+            if (!validateEmail(email)) {
+                showError('email', 'email-error', 'Invalid email format. Please use a valid email address');
+                hasError = true;
+            }
+            
+            if (subject.length < 3 || subject.length > 200) {
+                showError('subject', 'subject-error', 'Subject must be between 3 and 200 characters');
+                hasError = true;
+            }
+            
+            if (message.length < 10 || message.length > 5000) {
+                showError('message', 'message-error', 'Message must be between 10 and 5000 characters');
+                hasError = true;
+            }
+            
+            if (hasError) {
+                return;
+            }
+
+            // Disable submit button
+            submitBtn.disabled = true;
+            submitBtn.textContent = 'TRANSMITTING...';
+            submitBtn.style.opacity = '0.6';
+            
+            // Create secure mailto link
+            const mailtoLink = `mailto:karabomere47@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(
+                `Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}\n\n---\nThis message was sent securely from the portfolio contact form.`
+            )}`;
+            
+            // Open mailto link
+            window.location.href = mailtoLink;
+            
+            // Show success message
+            formStatus.className = 'block text-center p-6 rounded-xl mt-6 font-bold text-xl neon-border-animated bg-green-100 text-green-600';
+            formStatus.innerHTML = '> MESSAGE_QUEUED_FOR_TRANSMISSION<br/>> SECURITY_CHECK: PASSED';
+            
+            // Reset form
+            setTimeout(() => {
+                e.target.reset();
+                submitBtn.disabled = false;
+                submitBtn.textContent = 'TRANSMIT_MESSAGE';
+                submitBtn.style.opacity = '1';
+                formStatus.className = 'hidden';
+            }, 4000);
+        });
+
+        // Real-time validation feedback
+        document.getElementById('name').addEventListener('blur', function() {
+            const name = sanitizeInput(this.value);
+            if (name && !validateName(name)) {
+                showError('name', 'name-error', 'Invalid name format');
+            } else {
+                clearError('name', 'name-error');
+            }
+        });
+
+        document.getElementById('email').addEventListener('blur', function() {
+            const email = sanitizeInput(this.value);
+            if (email && !validateEmail(email)) {
+                showError('email', 'email-error', 'Invalid email format');
+            } else {
+                clearError('email', 'email-error');
+            }
+        });
+
+        // Enhanced Matrix Rain Effect with Hacker Glitch
+        const canvas = document.getElementById('matrix-canvas');
+        const ctx = canvas.getContext('2d');
+
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+
+        const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789@#$%^&*()_+-=[]{}|;:,.<>?/~`アイウエオカキクケコサシスセソタチツテトナニヌネノハヒフヘホマミムメモヤユヨラリルレロワヲン';
+        const fontSize = 16;
+        const columns = canvas.width / fontSize;
+        const drops = [];
+        const speeds = [];
+        const glitchChance = [];
+
+        for (let i = 0; i < columns; i++) {
+            drops[i] = Math.random() * -canvas.height / fontSize;
+            speeds[i] = Math.random() * 0.8 + 0.3;
+            glitchChance[i] = Math.random();
+        }
+
+        let glitchActive = false;
+        let glitchTimer = 0;
+
+        function drawMatrix() {
+            // Create black background with slight fade
+            ctx.fillStyle = 'rgba(0, 0, 0, 0.05)';
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+            ctx.font = fontSize + 'px monospace';
+
+            // Random glitch effect
+            if (Math.random() > 0.98) {
+                glitchActive = true;
+                glitchTimer = 10;
+            }
+
+            if (glitchActive && glitchTimer > 0) {
+                ctx.save();
+                ctx.translate(Math.random() * 4 - 2, 0);
+                glitchTimer--;
+                if (glitchTimer === 0) glitchActive = false;
+            }
+
+            for (let i = 0; i < drops.length; i++) {
+                const char = chars[Math.floor(Math.random() * chars.length)];
+                const x = i * fontSize;
+                const y = drops[i] * fontSize;
+                
+                // Create gradient for each character
+                const gradient = ctx.createLinearGradient(0, y - fontSize * 10, 0, y);
+                gradient.addColorStop(0, 'rgba(0, 255, 0, 0)');
+                gradient.addColorStop(0.5, 'rgba(0, 255, 0, 0.8)');
+                gradient.addColorStop(1, 'rgba(0, 255, 0, 1)');
+                
+                ctx.fillStyle = gradient;
+                
+                // Random brightness variation
+                if (Math.random() > 0.95) {
+                    ctx.fillStyle = '#ffffff';
+                    ctx.shadowColor = '#ffffff';
+                    ctx.shadowBlur = 20;
+                } else {
+                    ctx.shadowColor = '#00ff00';
+                    ctx.shadowBlur = 10;
+                }
+                
+                ctx.fillText(char, x, y);
+                
+                // Random glitch on individual characters
+                if (glitchActive && Math.random() > 0.9) {
+                    ctx.fillStyle = '#ff00ff';
+                    ctx.fillText(chars[Math.floor(Math.random() * chars.length)], x + Math.random() * 4 - 2, y);
+                }
+
+                if (drops[i] * fontSize > canvas.height && Math.random() > 0.975) {
+                    drops[i] = 0;
+                    speeds[i] = Math.random() * 0.8 + 0.3;
+                }
+                
+                drops[i] += speeds[i];
+            }
+
+            if (glitchActive) {
+                ctx.restore();
+            }
+
+            ctx.shadowBlur = 0;
+        }
+
+        setInterval(drawMatrix, 33);
+
+        // Resize canvas on window resize
+        window.addEventListener('resize', () => {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+            
+            // Recalculate columns
+            const newColumns = canvas.width / fontSize;
+            while (drops.length < newColumns) {
+                drops.push(Math.random() * -canvas.height / fontSize);
+                speeds.push(Math.random() * 0.8 + 0.3);
+                glitchChance.push(Math.random());
+            }
+        });
+
+        // Mobile Menu Toggle
+  const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+const mobileMenu = document.getElementById('mobile-menu');
+const hamburgerIcon = document.getElementById('hamburger-icon');
+const closeIcon = document.getElementById('close-icon');
+
+mobileMenuBtn.addEventListener('click', () => {
+  mobileMenu.classList.toggle('active');
+  hamburgerIcon.classList.toggle('hidden');
+  closeIcon.classList.toggle('hidden');
+});
+
+// Optional: close menu when clicking a link
+document.querySelectorAll('#mobile-menu a').forEach(link => {
+  link.addEventListener('click', () => {
+    mobileMenu.classList.remove('active');
+    hamburgerIcon.classList.remove('hidden');
+    closeIcon.classList.add('hidden');
+  });
+});
+
+
+        // Smooth Scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                    mobileMenu.classList.remove('active');
+                }
+            });
+        });
+
+        // Intersection Observer for Animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('section').forEach(section => {
+            section.style.opacity = '0';
+            section.style.transform = 'translateY(30px)';
+            section.style.transition = 'opacity 1s ease-out, transform 1s ease-out';
+            observer.observe(section);
+        });
+
+        // Active Navigation with Enhanced Effects
+        window.addEventListener('scroll', () => {
+            const sections = document.querySelectorAll('section[id]');
+            const scrollPosition = window.scrollY + 100;
+
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.offsetHeight;
+                const sectionId = section.getAttribute('id');
+                
+                if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+                    document.querySelectorAll('nav a').forEach(link => {
+                        link.classList.remove('neon-glow-ultra');
+                        if (link.getAttribute('href') === `#${sectionId}`) {
+                            link.classList.add('neon-glow-ultra');
+                        }
+                    });
+                }
+            });
+        });
+
+        // Prevent XSS attacks on dynamic content
+        function escapeHtml(text) {
+            const map = {
+                '&': '&amp;',
+                '<': '&lt;',
+                '>': '&gt;',
+                '"': '&quot;',
+                "'": '&#039;'
+            };
+            return text.replace(/[&<>"']/g, m => map[m]);
+        }
+
+
+
+        const filterBtns = document.querySelectorAll('.filter-btn');
+const projectCards = document.querySelectorAll('.project-card');
+
+filterBtns.forEach(btn => {
+  btn.addEventListener('click', () => {
+    const filter = btn.dataset.filter;
+
+    // Highlight active button
+    filterBtns.forEach(b => b.classList.remove('bg-green-500', 'text-black'));
+    btn.classList.add('bg-green-500', 'text-black');
+
+    // Show/hide projects
+    projectCards.forEach(card => {
+      if (filter === 'all' || card.dataset.category === filter) {
+        card.classList.remove('hidden');
+      } else {
+        card.classList.add('hidden');
+      }
+    });
+  });
+});
+
+                 // Set current year
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+       
+   </script>
+
+
+</body>
+</html>
