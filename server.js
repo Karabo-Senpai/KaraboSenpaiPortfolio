@@ -58,8 +58,9 @@ app.post("/send", async (req, res) => {
           <hr style="border:1px solid #00ff99; margin:20px 0;">
           <div style="text-align:center; color:#00ff99;">
             <p>Stay connected:</p>
-            <a href="https://github.com/KaraboMere" style="color:#00ff99; text-decoration:none; margin:0 10px;">GitHub</a> |
-            <a href="https://linkedin.com/in/karabomere" style="color:#00ff99; text-decoration:none; margin:0 10px;">LinkedIn</a> |
+            <a href="https://github.com/Karabo-Senpai" style="color:#00ff99; text-decoration:none; margin:0 10px;">GitHub</a> |
+            <a href="https://www.linkedin.com/in/karabo-dev/" style="color:#00ff99; text-decoration:none; margin:0 10px;">LinkedIn</a> |
+            <a href="https://discord.com/users/cyber.karabo" style="color:#00ff99; text-decoration:none; margin:0 10px;">Discord</a> |
             <a href="mailto:${process.env.EMAIL_USER}" style="color:#00ff99; text-decoration:none; margin:0 10px;">Email</a>
           </div>
           <div style="text-align:center; margin-top:20px;">
